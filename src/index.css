@@ -1,0 +1,27 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    
+
+}
+
+/* .container {
+    width: 100vw;
+    min-height: 100vh;
+    background-color: #ced8ff;
+}
+
+.navbar .logo {
+   height: 100px;
+   width: 100px;
+} */
+
+.con {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+    margin-left: 500px;
+}

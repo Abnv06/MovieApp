@@ -1,0 +1,32 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    background-color: antiquewhite;
+}
+ 
+.Logo{
+    padding: 2vh 2vh;
+    text-decoration: none;
+}
+
+.navbarMenu {
+    display: flex;
+    text-decoration: none;
+}
+
+.navbarMenu .Link{
+    text-decoration: none;
+}
+
+.navbarMenu a{
+    
+    padding: 2vh 2vh;
+}
