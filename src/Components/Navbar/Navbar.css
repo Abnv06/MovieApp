@@ -2,31 +2,124 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: sans-serif;
-
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .navbar {
     display: flex;
     justify-content: space-between;
-    background-color: antiquewhite;
+    align-items: center;
+    background-color: #141414;
+    padding: 1rem 2rem;
+    position: relative;
 }
- 
-.Logo{
-    padding: 2vh 2vh;
+
+.Logo {
     text-decoration: none;
+    font-size: 2rem;
+    font-weight: bold;
+    color: white;
+    display: flex;
+    align-items: center;
+    font-family: 'Netflix Sans', Arial, sans-serif;
+    cursor: pointer;
+}
+
+.Logo:hover {
+    color: #e50914;
 }
 
 .navbarMenu {
     display: flex;
-    text-decoration: none;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1.5rem;
 }
 
-.navbarMenu .Link{
+.navbarMenu a {
     text-decoration: none;
+    color: white;
+    font-size: 1rem;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
 }
 
-.navbarMenu a{
-    
-    padding: 2vh 2vh;
+.navbarMenu a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+input[type="text"] {
+    padding: 0.75rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    outline: none;
+    margin-left: 1.5rem;
+    background-color: #333;
+    color: white;
+    width: 300px; /* Increase width */
+    transition: width 0.3s ease;
+}
+
+input[type="text"]:focus {
+    border-color: #e50914;
+    width: 350px; /* Make it wider on focus */
+}
+
+.formContainer {
+    display: flex;
+    align-items: center;
+}
+
+@media screen and (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navbarMenu {
+        flex-direction: column;
+        gap: 0.5rem;
+        margin-top: 1rem;
+    }
+
+    .navbarMenu a {
+        padding: 1rem;
+    }
+
+    .formContainer {
+        width: 100%;
+        justify-content: center;
+        margin-top: 1rem;
+    }
+
+    input[type="text"] {
+        width: 80%;  /* Adjust the width on mobile */
+        margin: 10px 0; /* Add margin for better spacing */
+        padding: 0.75rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .Logo {
+        font-size: 1.5rem;
+    }
+
+    .navbarMenu a {
+        padding: 0.8rem 1rem;
+    }
+
+    input[type="text"] {
+        width: 90%;  /* Increase width on smaller devices */
+    }
+}
+
+/* Sticky navbar */
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: #141414;
 }

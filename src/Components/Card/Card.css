@@ -1,21 +1,78 @@
-.moviebox{
-    display: flex;
-    flex-wrap: wrap;
+/* Moviebox grid layout */
+.moviebox {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));  /* For larger screens, auto-fit with a minimum width of 250px */
+    gap: 20px;
     padding: 20px;
-    margin-top: 30px;
-    margin-left: 50px;
+    margin: 30px auto;
+    max-width: 1200px;
+    box-sizing: border-box;
 }
 
-.container{
-    background-color: rgb(154, 233, 233);
-    width: 20vw;
-    height: 55vh;
+/* Card container styling */
+.container {
+    background-color: #ffffff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
     display: flex;
     flex-direction: column;
-    padding: 20px;
-    align-items: center;
     justify-content: space-between;
-    margin: 10px;
-    border-radius: 10px;
+    text-align: center;
+    padding: 20px;
+    color: #333;
 }
 
+/* Hover effect for card */
+.container:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Image styling for the cards */
+.container img {
+    width: 80%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.container h1 {
+    font-size: 1.5rem;
+    margin: 10px 0;
+    color: #0077b6;
+}
+
+.container p {
+    margin: 5px 0;
+    font-size: 1rem;
+    color: #555;
+}
+
+/* Responsive layout for smaller screens */
+@media (max-width: 768px) {
+    .moviebox {
+        grid-template-columns: repeat(2, 1fr);  /* Display two cards per row on mobile */
+        padding: 10px;
+    }
+
+    .container {
+        padding: 15px;
+    }
+
+    .container h1 {
+        font-size: 1.2rem;
+    }
+
+    .container p {
+        font-size: 0.9rem;
+    }
+
+    .container img {
+        width: 90%;  /* Adjust image width for mobile */
+        height: auto;
+        border-radius: 10px;
+        margin-bottom: 10px;
+    }
+}

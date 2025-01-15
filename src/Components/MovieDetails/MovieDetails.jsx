@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { getMovies } from '../Card/MoviesList'  
 import { useParams } from 'react-router-dom'
 import Card from '../Card/Card'
-import '../../index.css'
+import '../../Components/MovieDetails/MovieDetails.css'
 
 
 
@@ -40,7 +40,7 @@ function MovieDetails() {
         <p>{movie.overview}</p>
         <p>{movie.vote_average}</p>
         <p>{movie.catagory}</p>
-        <button>Playyyyy Movie</button>
+        <button>Play Movie</button>
 
       </div>
 

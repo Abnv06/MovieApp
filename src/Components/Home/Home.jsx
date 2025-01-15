@@ -1,15 +1,11 @@
 import React, { useState } from 'react'
 import Card from '../Card/Card';
-import { getMovies } from '../Card/MoviesList';
+// import { getMovies } from '../Card/MoviesList';
 
 function Home() {
 
   // const [MovieData, setMovieData] = useState([])
 
-
- 
-
-  
 
   return (
 
